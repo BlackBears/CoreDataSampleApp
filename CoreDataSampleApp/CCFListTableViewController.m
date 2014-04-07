@@ -55,16 +55,18 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    CCFList *list = [NSEntityDescription insertNewObjectForEntityForName:@"List" inManagedObjectContext:self.managedObjectContext];
-    list.name = [NSString stringWithFormat:@"List %0.1f",[[NSDate date] timeIntervalSince1970]];
-    
-    NSError *saveError = nil;
-    if( ![[self managedObjectContext] save:&saveError] ) {
-        NSLog(@"ERROR saving list %@,%@", saveError, saveError.userInfo);
-    }
-    else {
-        self.lists = nil;
-        [[self tableView] reloadData];
+    if( buttonIndex != 0 ) {
+        CCFList *list = [NSEntityDescription insertNewObjectForEntityForName:@"List" inManagedObjectContext:self.managedObjectContext];
+        list.name = [NSString stringWithFormat:@"List %0.1f",[[NSDate date] timeIntervalSince1970]];
+        
+        NSError *saveError = nil;
+        if( ![[self managedObjectContext] save:&saveError] ) {
+            NSLog(@"ERROR saving list %@,%@", saveError, saveError.userInfo);
+        }
+        else {
+            self.lists = nil;
+            [[self tableView] reloadData];
+        }
     }
 }
 

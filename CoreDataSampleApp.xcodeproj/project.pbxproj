@@ -22,6 +22,11 @@
 		56953E6518F22C7600A9A8EE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56953E4918F22C7600A9A8EE /* CoreData.framework */; };
 		56953E6D18F22C7600A9A8EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56953E6B18F22C7600A9A8EE /* InfoPlist.strings */; };
 		56953E6F18F22C7600A9A8EE /* CoreDataSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56953E6E18F22C7600A9A8EE /* CoreDataSampleAppTests.m */; };
+		56953E7918F22CAA00A9A8EE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56953E7818F22CAA00A9A8EE /* MainStoryboard.storyboard */; };
+		56953E7C18F22D6100A9A8EE /* CCFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56953E7B18F22D6100A9A8EE /* CCFItem.m */; };
+		56953E8218F22DEE00A9A8EE /* CCFListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56953E8118F22DEE00A9A8EE /* CCFListTableViewController.m */; };
+		56953E8518F22E2800A9A8EE /* CCFItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56953E8418F22E2800A9A8EE /* CCFItemTableViewController.m */; };
+		56953E8818F239FA00A9A8EE /* CCFList.m in Sources */ = {isa = PBXBuildFile; fileRef = 56953E8718F239FA00A9A8EE /* CCFList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,15 @@
 		56953E6A18F22C7600A9A8EE /* CoreDataSampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataSampleAppTests-Info.plist"; sourceTree = "<group>"; };
 		56953E6C18F22C7600A9A8EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56953E6E18F22C7600A9A8EE /* CoreDataSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataSampleAppTests.m; sourceTree = "<group>"; };
+		56953E7818F22CAA00A9A8EE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		56953E7A18F22D6100A9A8EE /* CCFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFItem.h; sourceTree = "<group>"; };
+		56953E7B18F22D6100A9A8EE /* CCFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFItem.m; sourceTree = "<group>"; };
+		56953E8018F22DEE00A9A8EE /* CCFListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFListTableViewController.h; sourceTree = "<group>"; };
+		56953E8118F22DEE00A9A8EE /* CCFListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFListTableViewController.m; sourceTree = "<group>"; };
+		56953E8318F22E2700A9A8EE /* CCFItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFItemTableViewController.h; sourceTree = "<group>"; };
+		56953E8418F22E2800A9A8EE /* CCFItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFItemTableViewController.m; sourceTree = "<group>"; };
+		56953E8618F239FA00A9A8EE /* CCFList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFList.h; sourceTree = "<group>"; };
+		56953E8718F239FA00A9A8EE /* CCFList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +133,16 @@
 				56953E5518F22C7600A9A8EE /* CCFAppDelegate.m */,
 				56953E5A18F22C7600A9A8EE /* Images.xcassets */,
 				56953E5718F22C7600A9A8EE /* CoreDataSampleApp.xcdatamodeld */,
+				56953E8618F239FA00A9A8EE /* CCFList.h */,
+				56953E8718F239FA00A9A8EE /* CCFList.m */,
+				56953E7A18F22D6100A9A8EE /* CCFItem.h */,
+				56953E7B18F22D6100A9A8EE /* CCFItem.m */,
 				56953E4C18F22C7600A9A8EE /* Supporting Files */,
+				56953E7818F22CAA00A9A8EE /* MainStoryboard.storyboard */,
+				56953E8018F22DEE00A9A8EE /* CCFListTableViewController.h */,
+				56953E8118F22DEE00A9A8EE /* CCFListTableViewController.m */,
+				56953E8318F22E2700A9A8EE /* CCFItemTableViewController.h */,
+				56953E8418F22E2800A9A8EE /* CCFItemTableViewController.m */,
 			);
 			path = CoreDataSampleApp;
 			sourceTree = "<group>";
@@ -229,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56953E7918F22CAA00A9A8EE /* MainStoryboard.storyboard in Resources */,
 				56953E5018F22C7600A9A8EE /* InfoPlist.strings in Resources */,
 				56953E5B18F22C7600A9A8EE /* Images.xcassets in Resources */,
 			);
@@ -251,7 +275,11 @@
 			files = (
 				56953E5918F22C7600A9A8EE /* CoreDataSampleApp.xcdatamodeld in Sources */,
 				56953E5218F22C7600A9A8EE /* main.m in Sources */,
+				56953E8218F22DEE00A9A8EE /* CCFListTableViewController.m in Sources */,
+				56953E8518F22E2800A9A8EE /* CCFItemTableViewController.m in Sources */,
 				56953E5618F22C7600A9A8EE /* CCFAppDelegate.m in Sources */,
+				56953E8818F239FA00A9A8EE /* CCFList.m in Sources */,
+				56953E7C18F22D6100A9A8EE /* CCFItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

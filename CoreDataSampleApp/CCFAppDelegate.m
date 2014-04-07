@@ -1,12 +1,5 @@
-//
-//  CCFAppDelegate.m
-//  CoreDataSampleApp
-//
-//  Created by Cocoa Factory on 4/6/14.
-//  Copyright (c) 2014 Cocoa Factory. All rights reserved.
-//
-
 #import "CCFAppDelegate.h"
+#import "CCFListTableViewController.h"
 
 @implementation CCFAppDelegate
 
@@ -19,6 +12,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    CCFListTableViewController *listController = [sb instantiateInitialViewController];
+    listController.managedObjectContext = self.managedObjectContext;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:listController];
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

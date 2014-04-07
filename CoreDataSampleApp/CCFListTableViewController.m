@@ -15,6 +15,7 @@
     
     self.title = @"Lists";
 
+    //  for the sake of demonstration, pop up an alert view in a little while
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -64,6 +65,8 @@
             NSLog(@"ERROR saving list %@,%@", saveError, saveError.userInfo);
         }
         else {
+            //  force us to reload the lists from Core Data.
+            //  there are more efficient ways of doing this - e.g. NSFetchedResultsController
             self.lists = nil;
             [[self tableView] reloadData];
         }
